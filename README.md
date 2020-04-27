@@ -1,4 +1,4 @@
-# compiled_swift_static_lib
+# Compiled Swift static frameworks
 
 This repository shows how to compile Swift static libraries into static frameworks.
 
