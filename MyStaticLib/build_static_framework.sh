@@ -1,9 +1,9 @@
 # 0. clean build directories
 rm -rf   derived_data   MyStaticLib.framework
 # 1.1 Build static library for simulator
-xcodebuild build   -scheme MyStaticLib   -derivedDataPath derived_data   -arch x86_64   -sdk iphonesimulator
+xcodebuild build   -scheme MyStaticLib   -derivedDataPath derived_data   -arch x86_64   -sdk iphonesimulator BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 # 1.2 Build static library for iOS devices
-xcodebuild build   -scheme MyStaticLib   -derivedDataPath derived_data   -arch arm64   -sdk iphoneos
+xcodebuild build   -scheme MyStaticLib   -derivedDataPath derived_data   -arch arm64   -sdk iphoneos BUILD_LIBRARY_FOR_DISTRIBUTION=YES
 # 2. Create framework
 mkdir MyStaticLib.framework/
 # 3. Create binary compatible with devices and simulators
